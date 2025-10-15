@@ -1,0 +1,146 @@
+#%RAML 1.0 Library
+usage: collection of resource type of sf-acc-sys
+types:
+resourceTypes:
+  sf-acc-sys-ry:
+    usage: to represent sf
+    get?:
+      description: Success response of a <<resourcePathName|!singularize>>
+      responses:
+        200:
+          description: success response of <<resourcePathName|!singularize>>
+          body:
+            application/json:
+              type: <<Get200SuccessResponseTypeName>>
+              example: <<Get200SuccessExample>>
+        400:
+          description: Bad request
+          body:
+            application/json:
+              type: <<Get400ErrorResponseTypeName>>
+              example: <<Get400ErrorExample>>
+        401:
+          description: Unauthorized
+          body:
+            application/json:
+              type: <<Get401ErrorResponseTypeName>>
+              example: <<Get401ErrorExample>>
+        404:
+          description: Not Found
+          body:
+            application/json:
+              type: <<Get404ErrorResponseTypeName>>
+              example: <<Get404ErrorExample>>
+        500:
+          description: Internal Server Error
+          body:
+            application/json:
+              type: <<Get500ErrorResponseTypeName>>
+              example: <<Get500ErrorExample>>
+        503:
+          description: Service Unavailable
+          body:
+            application/json:
+              type: <<Get503ErrorResponseTypeName>>
+              example: <<Get503ErrorExample>>
+    post?:
+      description: This operation creates a Account entity.
+      body:
+        application/json:
+          type: <<PostTypeName>>
+          example: <<PostRequestExample>>
+      responses:
+        201:
+          description: OK/Created
+          body:
+            application/json:
+              type: <<Post201SuccessResponseTypeName>>
+              example: <<Post201SuccessExample>>
+        400:
+          description: Bad Request
+          body:
+            application/json:
+              type: <<Post400ErrorResponseTypeName>>
+              example: <<Post400ErrorExample>>
+        401:
+          description: Unauthorized
+          body:
+            application/json:
+              type: <<Post401ErrorResponseTypeName>>
+              example: <<Post401ErrorExample>>
+        404:
+          description: Not Found
+          body:
+            application/json:
+              type: <<Post404ErrorResponseTypeName>>
+              example: <<Post404ErrorExample>>
+        405:
+          description: Method Not allowed
+          body:
+            application/json:
+              type: <<Post405ErrorResponseTypeName>>
+              example: <<Post405ErrorExample>>
+        500:
+          description: Internal Server Error
+          body:
+            application/json:
+              type: <<Post500ErrorResponseTypeName>>
+              example: <<Post500ErrorExample>>
+        503:
+          description: Service Unavailable
+          body:
+            application/json:
+              type: <<Post503ErrorResponseTypeName>>
+              example: <<Post503ErrorExample>>
+    put?:
+      description: This operation updates Account entity.
+      body:
+        application/json:
+          type: <<PutTypeName>>
+          example: <<PutRequestExample>>
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              type: <<Put200SuccessResponseTypeName>>
+              example: <<Put200SuccessExample>>
+        400:
+          description: Bad Request
+          body:
+            application/json:
+              type: <<Put400ErrorResponseTypeName>>
+              example: <<Put400ErrorExample>>
+        401:
+          description: Unauthorized
+          body:
+            application/json:
+              type: <<Put401ErrorResponseTypeName>>
+              example: <<Put401ErrorExample>>
+        404:
+          description: Not Found
+          body:
+            application/json:
+              type: <<Put404ErrorResponseTypeName>>
+              example: <<Put404ErrorExample>>
+        405:
+          description: Method Not allowed
+          body:
+            application/json:
+              type: <<Put405ErrorResponseTypeName>>
+              example: <<Put405ErrorExample>>
+        500:
+          description: Internal Server Error
+          body:
+            application/json:
+              type: <<Put500ErrorResponseTypeName>>
+              example: <<Put500ErrorExample>>
+        503:
+          description: Service Unavailable
+          body:
+            application/Json:
+              type: <<Put503ErrorResponseTypeName>>
+              example: <<Put503ErrorExample>>
+
+      
+       

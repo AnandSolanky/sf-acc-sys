@@ -1,0 +1,124 @@
+#%RAML 1.0 Library
+usage: common datatype
+types:
+  get200SuccessResponse:
+    type: array
+    items:
+      type: get200ref
+  get200ref:
+    type: object
+    properties:
+      id:
+        type: string
+        required: true
+        example: "001Qy00001NzX6BIAV"
+      name:
+        type: string
+        required: true
+        example: "emp"
+      phone:
+        type: string
+        required: true
+        example: "123456789"
+      website:
+        type: string
+        required: true
+        example: "www.example.com"
+      employees:
+        type: number
+        required: true
+        example: 200
+      sync-to-db:
+        type: string
+        required: true
+        enum: ["TRUE","FALSE"]
+        example: "TRUE"
+      update-time:
+        type: string
+        required: true
+        example: "2025-09-15T08:26:43.000Z"
+      create-time:
+        type: string
+        required: true
+        example: "2025-09-15T08:26:43.000Z"
+      external-id:
+        type: number
+        required: true
+        example: 1
+  errorResponse:
+    type: object
+    properties:
+      reason:
+        type: string
+        required: true
+        example: "Not found"
+      code:
+        type: string
+        required: true
+        example: "404"
+      datetime:
+        type: string
+        required: true
+        example: "16-09-2025, 03:24:09 PM"
+      correlationId:
+        type: string
+        required: true
+        example: "1220000b-t567789-44949249"
+  postBodytype:
+    type: object
+    properties:
+      name:
+        type: string
+        required: true
+        example: "emp"
+      phone:
+        type: string
+        required: true
+        example: "123456789"
+      website:
+        type: string
+        required: true
+        example: "www.example.com"
+      employees:
+        type: number
+        required: true
+        example: 200
+  postSuccessResponse:
+    type: object
+    properties:
+      message:
+        type: string
+        required: true
+        example: "your ID is 001Qy00001NzX6BIAV"
+  putBodyType:
+    type: object
+    properties:
+      id:
+        type: string
+        required: true
+        example: "001Qy00001NzX6BIAV"
+      name:
+        type: string
+        required: true
+        example: "emp"
+      phone:
+        type: string
+        required: true
+        example: "123456789"
+      website:
+        type: string
+        required: true
+        example: "www.example.com"
+      employees:
+        type: number
+        required: true
+        example: 200
+  putSuccessResponse:
+    type: object
+    properties:
+      message:
+        type: string
+        required: true
+        example: "ID 001Qy00001NzX6BIAV is updated"
+    
+        

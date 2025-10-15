@@ -1,0 +1,72 @@
+#%RAML 1.0
+title: sf-acc-sys
+version: v1
+mediaType: 
+- application/json
+
+uses:
+  resourceTypeLib: /resourcetype/sf-acc-sys-resourse-type.raml
+  dataTypeLib: /datatype/sf-acc-sys-data-type.raml
+
+
+/account:
+  get:
+  displayName: get-account
+  type:
+    resourceTypeLib.sf-acc-sys-ry:
+      Get200SuccessResponseTypeName: dataTypeLib.get200SuccessResponse
+      Get400ErrorResponseTypeName: dataTypeLib.errorResponse
+      Get401ErrorResponseTypeName: dataTypeLib.errorResponse
+      Get404ErrorResponseTypeName: dataTypeLib.errorResponse
+      Get500ErrorResponseTypeName: dataTypeLib.errorResponse
+      Get503ErrorResponseTypeName: dataTypeLib.errorResponse
+      Get200SuccessExample: !include /getExample/get200SuccessExample.json
+      Get400ErrorExample: !include /getExample/get400ErrorResponse.json
+      Get401ErrorExample: !include /getExample/get401ErrorResponse.json
+      Get404ErrorExample: !include /getExample/get404ErrorResponse.json
+      Get500ErrorExample: !include /getExample/get500ErrorResponse.json
+      Get503ErrorExample: !include /getExample/get503ErrorResponse.json
+
+/register-account:
+  post:
+  displayName: register-account
+  type:
+    resourceTypeLib.sf-acc-sys-ry:
+      PostTypeName: dataTypeLib.postBodytype
+      Post201SuccessResponseTypeName: dataTypeLib.postSuccessResponse
+      Post400ErrorResponseTypeName: dataTypeLib.errorResponse
+      Post401ErrorResponseTypeName: dataTypeLib.errorResponse
+      Post404ErrorResponseTypeName: dataTypeLib.errorResponse
+      Post405ErrorResponseTypeName: dataTypeLib.errorResponse
+      Post500ErrorResponseTypeName: dataTypeLib.errorResponse
+      Post503ErrorResponseTypeName: dataTypeLib.errorResponse
+      PostRequestExample: !include /postExample/postRequestExample.json
+      Post201SuccessExample: !include /postExample/post201SuccessExample.json
+      Post400ErrorExample: !include /postExample/post400ErrorResponse.json
+      Post401ErrorExample: !include /postExample/post401ErrorResponse.json
+      Post404ErrorExample: !include /postExample/post404ErrorResponse.json
+      Post405ErrorExample: !include /postExample/post405ErrorResponse.json
+      Post500ErrorExample: !include /postExample/post500ErrorResponse.json
+      Post503ErrorExample: !include /postExample/post503ErrorResponse.json
+
+/update-account:
+  put:
+  displayName: update-account
+  type:
+    resourceTypeLib.sf-acc-sys-ry:
+      PutTypeName: dataTypeLib.putBodyType
+      Put200SuccessResponseTypeName: dataTypeLib.putSuccessResponse
+      Put400ErrorResponseTypeName: dataTypeLib.errorResponse
+      Put401ErrorResponseTypeName: dataTypeLib.errorResponse
+      Put404ErrorResponseTypeName: dataTypeLib.errorResponse
+      Put405ErrorResponseTypeName: dataTypeLib.errorResponse
+      Put500ErrorResponseTypeName: dataTypeLib.errorResponse
+      Put503ErrorResponseTypeName: dataTypeLib.errorResponse
+      PutRequestExample: !include /putExample/putRequestExample.json
+      Put200SuccessExample: !include /putExample/put200SuccessResponse.json
+      Put400ErrorExample: !include /putExample/put400ErrorResponse.json
+      Put401ErrorExample: !include /putExample/put401ErrorResponse.json
+      Put404ErrorExample: !include /putExample/put404ErrorResponse.json
+      Put405ErrorExample: !include /putExample/put405ErrorResponse.json
+      Put500ErrorExample: !include /putExample/put500ErrorResponse.json
+      Put503ErrorExample: !include /putExample/put503ErrorResponse.json
